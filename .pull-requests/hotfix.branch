@@ -1,0 +1,6 @@
+[open-pull-requests "defaults"]
+	source-branch = ${SOURCE_BRANCH}
+	destination-branch = master
+	title = Hotfix ${SOURCE_BRANCH}
+	description = Hotfixes an existing bug on production.
+	delete-source-branch = true

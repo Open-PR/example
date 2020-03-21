@@ -1,0 +1,6 @@
+[open-pull-requests "defaults"]
+	source-branch = ${SOURCE_BRANCH}
+	destination-branch = develop
+	title = Bugfix ${SOURCE_BRANCH}
+	description = Fixes an existing bug on development branch.
+	delete-source-branch = true

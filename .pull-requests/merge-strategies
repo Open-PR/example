@@ -1,0 +1,36 @@
+[open-pull-requests "core"]
+	merge-strategies = MERGE_COMMIT
+	merge-strategies = FAST_FORWARD
+	merge-strategies = FAST_FORWARD_ONLY
+	merge-strategies = REBASE_THEN_MERGE
+	merge-strategies = REBASE_THEN_FAST_FORWARD
+	merge-strategies = SQUASH
+	merge-strategies = SQUASH_FAST_FORWARD_ONLY
+
+[merge-strategy "MERGE_COMMIT"]
+	title = Merge commit (`--no-ff`)
+	description = Always create a new merge commit and update the target branch to it, even if the source branch is already up to date with the target branch.
+
+[merge-strategy "FAST_FORWARD"]
+	title = Fast-forward (`--ff`)
+	description = If the source branch is out of date with the target branch, create a merge commit. Otherwise, update the target branch to the latest commit on the source branch.
+
+[merge-strategy "FAST_FORWARD_ONLY"]
+	title = Fast-forward only (`--ff-only`)
+	description = If the source branch is out of date with the target branch, reject the merge request. Otherwise, update the target branch to the latest commit on the source branch.
+
+[merge-strategy "REBASE_THEN_MERGE"]
+	title = Rebase, merge (rebase + merge `--no-ff`)
+	description = Commits from the source branch onto the target branch, creating a new non-merge commit for each incoming commit. Creates a merge commit to update the target branch. The PR branch is not modified by this operation.
+
+[merge-strategy "REBASE_THEN_FAST_FORWARD"]
+	title = Rebase, fast-forward (rebase + merge `--ff-only`)
+	description = Commits from the source branch onto the target branch, creating a new non-merge commit for each incoming commit. Fast-forwards the target branch with the resulting commits. The PR branch is not modified by this operation.
+
+[merge-strategy "SQUASH"]
+	title = Squash (`--squash`)
+	description = Combine all commits into one new non-merge commit on the target branch.
+
+[merge-strategy "SQUASH_FAST_FORWARD_ONLY"]
+	title = Squash, fast-forward only (`--squash --ff-only`)
+	description = If the source branch is out of date with the target branch, reject the merge request. Otherwise, combine all commits into one new non-merge commit on the target branch.

@@ -1,0 +1,6 @@
+[open-pull-requests "defaults"]
+	source-branch = ${SOURCE_BRANCH}
+	destination-branch = master
+	title = Release ${SOURCE_BRANCH}
+	description = Publishes a new release.
+	delete-source-branch = true

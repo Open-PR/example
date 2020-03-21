@@ -1,0 +1,40 @@
+[open-pull-requests "core"]
+	statuses = READY
+	statuses = CONFLICTED
+	statuses = DEFERRED
+	statuses = MERGED
+	statuses = DECLINED
+	statuses = SUPERSEDED
+	statuses = DRAFT
+
+[status "READY"]
+	title = Ready
+	description = The pull request is ready to be reviewed.
+
+[status "CONFLICTED"]
+	title = Conflicted
+	description = The pull request cannot be merged as it is because there are some conflicts.
+
+[status "NEEDS_WORK"]
+	title = Needs Work
+	description = The pull request has been reviewed and it has some issues that need to be addressed.
+
+[status "DRAFT"]
+	title = Draft
+	description = The pull request is a work in progress draft that is not ready to be merged just yet.
+
+[status "MERGED"]
+	title = Merged
+	description = The pull request has been accepted and merged.
+
+[status "DECLINED"]
+	title = Declined
+	description = The pull request has been declined.
+
+[status "SUPERSEDED"]
+	title = Superseded
+	description = A new pull request solves the problem better.
+
+[status "DRAFT"]
+	title = Draft
+	description = The pull request is a work in progress draft that is not ready to be merged just yet.

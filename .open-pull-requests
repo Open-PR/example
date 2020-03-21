@@ -1,0 +1,39 @@
+[open-pull-requests "core"]
+	version = 1.0
+
+[open-pull-requests "defaults"]
+	status = OPEN
+	title = Pull request by $USERNAME
+	description = New pull request
+	merge-strategy = MERGE_COMMIT
+	delete-source-branch = true
+	destination-repository = https://github.com/Open-PR/example.git
+	destination-branch = develop
+	source-repository = https://github.com/Open-PR/example.git
+	source-branch = feature/**
+	storage-repository = https://github.com/Open-PR/example.git
+	storage-reference = refs/pull-requests/
+
+[include]
+	path = .pull-requests/statuses
+	path = .pull-requests/merge-strategies
+	path = .pull-requests/reactions
+	path = .pull-requests/opinions
+
+[includeIf "onbranch:master"]
+	path = .pull-requests/master.branch
+
+[includeIf "onbranch:develop"]
+	path = .pull-requests/develop.branch
+
+[includeIf "onbranch:feature/**"]
+	path = .pull-requests/feature.branch
+
+[includeIf "onbranch:bugfix/**"]
+	path = .pull-requests/bugfix.branch
+
+[includeIf "onbranch:hotfix/**"]
+	path = .pull-requests/hotfix.branch
+
+[includeIf "onbranch:release/**"]
+	path = .pull-requests/release.branch

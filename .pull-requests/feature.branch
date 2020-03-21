@@ -1,0 +1,6 @@
+[open-pull-requests "defaults"]
+	source-branch = ${SOURCE_BRANCH}
+	destination-branch = develop
+	title = Feature ${SOURCE_BRANCH}
+	description = Adds a new feature to the main development branch.
+	delete-source-branch = true

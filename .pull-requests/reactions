@@ -1,0 +1,41 @@
+[open-pull-requests "core"]
+	reactions = PLUS_ONE
+	reactions = MINUS_ONE
+	reactions = LAUGH
+	reactions = CONFUSED
+	reactions = HEART
+	reactions = HOORAY
+	reactions = ROCKET
+	reactions = EYES
+
+[reaction "PLUS_ONE"]
+	title = +1
+	emoji = 👍
+
+[reaction "MINUS_ONE"]
+	title = -1
+	emoji = 👎
+
+[reaction "LAUGH"]
+	title = Laugh
+	emoji = 😁
+
+[reaction "CONFUSED"]
+	title = Confused
+	emoji = 😕
+
+[reaction "HEART"]
+	title = Heart
+	emoji = ♥
+
+[reaction "HOORAY"]
+	title = Hooray
+	emoji = 🎉
+
+[reaction "ROCKET"]
+	title = Rocket
+	emoji = 🚀
+
+[reaction "EYES"]
+	title = Eyes
+	emoji = 👀

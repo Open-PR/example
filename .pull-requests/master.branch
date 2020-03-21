@@ -1,0 +1,6 @@
+[open-pull-requests "defaults"]
+	source-branch = master
+	destination-branch = develop
+	title = Sync develop branch
+	description = Synchronizes main development branch with the latest changes on production.
+	delete-source-branch = false

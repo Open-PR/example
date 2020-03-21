@@ -1,0 +1,16 @@
+[open-pull-requests "core"]
+	opinions = APPROVED
+	opinions = REJECTED
+	opinions = NEEDS_WORK
+
+[opinion "APPROVED"]
+	title = Approved
+	emoji = 👍
+
+[opinion "REJECTED"]
+	title = Rejected
+	emoji = 👎
+
+[opinion "NEEDS_WORK"]
+	title = Needs Work
+	emoji = 🚧

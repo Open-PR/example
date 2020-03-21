@@ -1,0 +1,6 @@
+[open-pull-requests "defaults"]
+	source-branch = develop
+	destination-branch = releases/next
+	title = Updates next release
+	description = Adds finished features and bugfixes to the next release.
+	delete-source-branch = false
