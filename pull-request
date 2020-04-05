@@ -1,0 +1,132 @@
+[open-pull-requests "core"]
+	version = 1.0
+	statuses = READY
+	statuses = CONFLICTED
+	statuses = DEFERRED
+	statuses = MERGED
+	statuses = DECLINED
+	statuses = SUPERSEDED
+	statuses = DRAFT
+	merge-strategies = MERGE_COMMIT
+	merge-strategies = FAST_FORWARD
+	merge-strategies = FAST_FORWARD_ONLY
+	merge-strategies = REBASE_THEN_MERGE
+	merge-strategies = REBASE_THEN_FAST_FORWARD
+	merge-strategies = SQUASH
+	merge-strategies = SQUASH_FAST_FORWARD_ONLY
+	reactions = PLUS_ONE
+	reactions = MINUS_ONE
+	reactions = LAUGH
+	reactions = CONFUSED
+	reactions = HEART
+	reactions = HOORAY
+	reactions = ROCKET
+	reactions = EYES
+	opinions = APPROVED
+	opinions = REJECTED
+	opinions = NEEDS_WORK
+[open-pull-requests "defaults"]
+	status = OPEN
+	title = Pull request by $USERNAME
+	description = New pull request
+	merge-strategy = MERGE_COMMIT
+	delete-source-branch = true
+	destination-repository = https://github.com/Open-PR/example.git
+	destination-branch = develop
+	source-repository = https://github.com/Open-PR/example.git
+	source-branch = feature/**
+	source-branch = ${SOURCE_BRANCH}
+	destination-branch = develop
+	title = Feature ${SOURCE_BRANCH}
+	description = Adds a new feature to the main development branch.
+	delete-source-branch = true
+[status "READY"]
+	title = Ready
+	description = The pull request is ready to be reviewed.
+[status "CONFLICTED"]
+	title = Conflicted
+	description = The pull request cannot be merged as it is because there are some conflicts.
+[status "NEEDS_WORK"]
+	title = Needs Work
+	description = The pull request has been reviewed and it has some issues that need to be addressed.
+[status "DRAFT"]
+	title = Draft
+	description = The pull request is a work in progress draft that is not ready to be merged just yet.
+	title = Draft
+	description = The pull request is a work in progress draft that is not ready to be merged just yet.
+[status "MERGED"]
+	title = Merged
+	description = The pull request has been accepted and merged.
+[status "DECLINED"]
+	title = Declined
+	description = The pull request has been declined.
+[status "SUPERSEDED"]
+	title = Superseded
+	description = A new pull request solves the problem better.
+[merge-strategy "MERGE_COMMIT"]
+	title = Merge commit (`--no-ff`)
+	description = Always create a new merge commit and update the target branch to it, even if the source branch is already up to date with the target branch.
+[merge-strategy "FAST_FORWARD"]
+	title = Fast-forward (`--ff`)
+	description = If the source branch is out of date with the target branch, create a merge commit. Otherwise, update the target branch to the latest commit on the source branch.
+[merge-strategy "FAST_FORWARD_ONLY"]
+	title = Fast-forward only (`--ff-only`)
+	description = If the source branch is out of date with the target branch, reject the merge request. Otherwise, update the target branch to the latest commit on the source branch.
+[merge-strategy "REBASE_THEN_MERGE"]
+	title = Rebase, merge (rebase + merge `--no-ff`)
+	description = Commits from the source branch onto the target branch, creating a new non-merge commit for each incoming commit. Creates a merge commit to update the target branch. The PR branch is not modified by this operation.
+[merge-strategy "REBASE_THEN_FAST_FORWARD"]
+	title = Rebase, fast-forward (rebase + merge `--ff-only`)
+	description = Commits from the source branch onto the target branch, creating a new non-merge commit for each incoming commit. Fast-forwards the target branch with the resulting commits. The PR branch is not modified by this operation.
+[merge-strategy "SQUASH"]
+	title = Squash (`--squash`)
+	description = Combine all commits into one new non-merge commit on the target branch.
+[merge-strategy "SQUASH_FAST_FORWARD_ONLY"]
+	title = Squash, fast-forward only (`--squash --ff-only`)
+	description = If the source branch is out of date with the target branch, reject the merge request. Otherwise, combine all commits into one new non-merge commit on the target branch.
+[reaction "PLUS_ONE"]
+	title = +1
+	emoji = 👍
+[reaction "MINUS_ONE"]
+	title = -1
+	emoji = 👎
+[reaction "LAUGH"]
+	title = Laugh
+	emoji = 😁
+[reaction "CONFUSED"]
+	title = Confused
+	emoji = 😕
+[reaction "HEART"]
+	title = Heart
+	emoji = ♥
+[reaction "HOORAY"]
+	title = Hooray
+	emoji = 🎉
+[reaction "ROCKET"]
+	title = Rocket
+	emoji = 🚀
+[reaction "EYES"]
+	title = Eyes
+	emoji = 👀
+[opinion "APPROVED"]
+	title = Approved
+	emoji = 👍
+[opinion "REJECTED"]
+	title = Rejected
+	emoji = 👎
+[opinion "NEEDS_WORK"]
+	title = Needs Work
+	emoji = 🚧
+[pull-request "core"]
+	id = 1
+	title = First Open Pull Request ever
+	status = OPEN
+	description = This pull request is just an example.\n\nThe description can contain several lines of text. It should be human-readable,\nbut it may be written any *lightweight markup languages*.
+[pull-request "destination"]
+	repository = https://github.com/Open-PR/example.git
+	branch = develop
+	commit = 3311a8a020237359403fe8e6b40671ee2ed1889b
+[pull-request "source"]
+	repository = https://github.com/Open-PR/example.git
+	branch = feature/hello-world
+	commit = b0c70a6943b131d893ed87909f7c784453ec5b69
